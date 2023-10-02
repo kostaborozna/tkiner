@@ -43,8 +43,6 @@ class App(customtkinter.CTk):
         self.password_entry = customtkinter.CTkEntry(self.second_task_frame, placeholder_text='Введите пароль для входа в рай')
         self.password_entry.grid(row=1, column=0, ipadx=60, padx=10, pady=10)
 
-
-
         self.button_entry = customtkinter.CTkButton(self.second_task_frame, text='Проверка на прочность',
                                                     command=self.button_second_task)
         self.button_entry.grid(row=2, column=0, ipadx=60, padx=10, pady=10)
@@ -52,8 +50,6 @@ class App(customtkinter.CTk):
         # Label for cool password system!!!
         self.label_update = customtkinter.CTkLabel(self.second_task_frame, text='')
         self.label_update.grid(row=3, column=0, ipadx=60, padx=10, pady=10)
-
-
 
         # Third task
         # Create frame
@@ -84,19 +80,12 @@ class App(customtkinter.CTk):
         self.label_result = customtkinter.CTkLabel(self.third_task_frame, text='Сумма')
         self.label_result.grid(row=5, column=0, ipadx=60, padx=10, pady=10)
 
-
-
-
-
-
-
         # Fourth task
         # Create frame
         self.fourth_task_frame = customtkinter.CTkFrame(self, fg_color='#62b388')
         self.fourth_task_frame.grid(row=1, column=1, padx=10, sticky='n')
 
         self.radio_var = tkinter.IntVar(value=0)
-
 
         self.radio_button_1 = customtkinter.CTkRadioButton(self.fourth_task_frame, text='List',
                                                            variable=self.radio_var, value=1, command=self.radio_button_checks)
@@ -124,15 +113,15 @@ class App(customtkinter.CTk):
 
     def check_box_task(self):
         total = 0
-        if self.check_button_1.get() == 1:
+        if self.check_button_1.get():
             total += int(self.check_button_1.cget('text'))
-        if self.check_button_2.get() == 1:
+        if self.check_button_2.get():
             total += int(self.check_button_2.cget('text'))
-        if self.check_button_3.get() == 1:
+        if self.check_button_3.get():
             total += int(self.check_button_3.cget('text'))
-        if self.check_button_4.get() == 1:
+        if self.check_button_4.get():
             total += int(self.check_button_4.cget('text'))
-        if self.check_button_5.get() == 1:
+        if self.check_button_5.get():
             total += int(self.check_button_5.cget('text'))
         self.label_result.configure(text=f'Сумма: {total}')
 
@@ -143,23 +132,7 @@ class App(customtkinter.CTk):
             self.label_radio_buttons.configure(text='person = {"name": "Alice", "age": 30}\nperson = {"name": "Alice", "age": 30}'
                                                     '\nperson["city"] = "New York"')
         elif self.radio_var.get() == 3:
-            self.label_radio_buttons.configure(text='colors = {"red", "green", "blue"}\ncolors.add("yellow")\n5)colors.remove("red")')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            self.label_radio_buttons.configure(text='colors = {"red", "green", "blue"}\ncolors.add("yellow")\ncolors.remove("red")')
 
 customtkinter.set_appearance_mode('dark')
 customtkinter.set_default_color_theme('green')
