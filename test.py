@@ -1,28 +1,10 @@
-import tkinter
-import customtkinter
-
-
-
-class Frame(customtkinter.CTkFrame):
-    def __int__(self, master, **kwargs):
-        super().__init__(master, **kwargs)
-
-        self.label = customtkinter.CTkLabel(self)
-        self.label.grid(row=0, column=0, padx=20)
-
-class App(customtkinter.CTk):
-    def __int__(self):
-        super().__init__()
-        self.geometry("1200x800")
-        self.title("First task")
-
-        self.frame = Frame(master=self)
-        self.my_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
-
-
-
-# Change a theme
-customtkinter.set_appearance_mode("dark")
-customtkinter.set_default_color_theme("dark-blue")
-app = App()
-app.mainloop()
+        self.check_button_1 = customtkinter.CTkCheckBox(self.third_task_frame, text='1')
+        self.check_button_1.grid(row=1, column=0, ipadx=60, padx=10, pady=10)
+        self.check_button_2 = customtkinter.CTkCheckBox(self.third_task_frame, text='2')
+        self.check_button_2.grid(row=2, column=0, ipadx=60, padx=10, pady=10)
+        self.check_button_3 = customtkinter.CTkCheckBox(self.third_task_frame, text='4')
+        self.check_button_3.grid(row=3, column=0, ipadx=60, padx=10, pady=10)
+        self.check_button_4 = customtkinter.CTkCheckBox(self.third_task_frame, text='8')
+        self.check_button_4.grid(row=3, column=0, ipadx=60, padx=10, pady=10)
+        self.check_button_5 = customtkinter.CTkCheckBox(self.third_task_frame, text='16')
+        self.check_button_5.grid(row=4, column=0, ipadx=60, padx=10, pady=10)
